@@ -37,7 +37,10 @@ java_sdk_library {
         ],
     },
     sdk_version: "module_current",
-    defaults: ["framework-module-defaults"],
+    defaults: [
+        "auxiliary-java-defaults",
+        "framework-module-defaults",
+    ],
     impl_library_visibility: [
         "//packages/modules/Auxiliary/service:__subpackages__"
     ],
