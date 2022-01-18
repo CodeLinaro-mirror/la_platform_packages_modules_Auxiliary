@@ -30,6 +30,7 @@ android_app_certificate {
 apex {
     name: "com.android.auxiliary",
     manifest: "manifest.json",
+    apps: ["Auxiliary"],
     file_contexts: ":com.android.auxiliary-file_contexts",
     key: "com.android.auxiliary.key",
     min_sdk_version: "current",

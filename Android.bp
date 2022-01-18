@@ -25,3 +25,29 @@ java_defaults {
     },
     min_sdk_version: "Tiramisu",
 }
+
+filegroup {
+    name: "auxiliary-sources",
+    srcs: [
+        "src/**/*.java",
+    ],
+    path: "src",
+}
+
+android_app {
+    name: "Auxiliary",
+    srcs: [
+        ":auxiliary-sources",
+    ],
+    libs: [
+        "framework-auxiliary",
+    ],
+    sdk_version: "module_current",
+    min_sdk_version: "Tiramisu",
+    updatable: true,
+    certificate: "platform", // TODO(b/215064213): sign with a auxiliary key
+    apex_available: ["com.android.auxiliary"],
+    defaults: [
+        "auxiliary-java-defaults",
+    ],
+}
