@@ -39,6 +39,4 @@ java_sdk_library {
     impl_library_visibility: [
         "//packages/modules/Auxiliary:__subpackages__"
     ],
-    // TODO(b/215064213): Should be removed once we add library tracking api files
-    unsafe_ignore_missing_latest_api: true,
 }
