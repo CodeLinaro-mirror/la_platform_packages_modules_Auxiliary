@@ -18,14 +18,14 @@
 -->
 <manifest
     xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.android.auxiliary"
+    package="com.android.auxiliary.service"
     android:versionCode="1"
     android:versionName="T-initial">
 
     <application>
         <service android:name=".AuxiliaryServiceImpl" android:exported="true" >
             <intent-filter>
-                <action android:name="com.android.auxiliary.AuxiliaryService" />
+                <action android:name="com.android.auxiliary.service.AuxiliaryService" />
             </intent-filter>
         </service>
     </application>
