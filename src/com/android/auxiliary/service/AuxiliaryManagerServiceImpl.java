@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.auxiliary;
+package com.android.auxiliary.service;
 
 import android.app.Service;
 import android.content.Intent;
