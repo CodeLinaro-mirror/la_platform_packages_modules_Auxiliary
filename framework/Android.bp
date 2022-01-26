@@ -23,7 +23,6 @@ filegroup {
         "java/**/*.aidl",
     ],
     visibility: [
-        "//frameworks/base",
         "//packages/modules/Auxiliary:__subpackages__"
     ],
     path: "java",
@@ -40,6 +39,4 @@ java_sdk_library {
     impl_library_visibility: [
         "//packages/modules/Auxiliary:__subpackages__"
     ],
-    min_sdk_version: "Tiramisu",
-    apex_available: ["com.android.auxiliary"],
 }
