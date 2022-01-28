@@ -26,4 +26,15 @@ public class AuxiliaryManagerServiceImpl extends Service {
     public IBinder onBind(Intent intent) {
         return null;
     }
+
+    String getVersion() {
+        return "1.0";
+    }
+
+    final class AuxiliaryManagerServiceDelegate extends IAuxiliaryManagerService.Stub {
+        @Override
+        public String getVersion() {
+            return AuxiliaryManagerServiceImpl.this.getVersion();
+        }
+    }
 }
