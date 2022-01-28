@@ -18,8 +18,6 @@ package {
 
 android_test {
     name: "AuxiliaryManagerServicesTests",
-    target_sdk_version: "current",
-    min_sdk_version: "Tiramisu",
     srcs: [
         "src/**/*.java",
         ":auxiliary-aidl",
@@ -35,4 +33,7 @@ android_test {
         "androidx.test.ext.truth",
         "androidx.test.rules",
     ],
+    target_sdk_version: "current",
+    min_sdk_version: "Tiramisu",
+    test_suites: ["general-tests"],
 }
