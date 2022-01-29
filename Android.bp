@@ -27,6 +27,12 @@ java_defaults {
 }
 
 filegroup {
+    name: "auxiliary-aidl",
+    srcs: ["src/**/*.aidl"],
+    path: "src",
+}
+
+filegroup {
     name: "auxiliary-sources",
     srcs: [
         "src/**/*.java",
@@ -37,6 +43,7 @@ filegroup {
 android_app {
     name: "Auxiliary",
     srcs: [
+        ":auxiliary-aidl",
         ":auxiliary-sources",
     ],
     libs: [
