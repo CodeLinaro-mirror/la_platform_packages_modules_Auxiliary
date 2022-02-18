@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.auxiliary.service;
+package android.auxiliary.aidl;
 
 /** @hide */
 interface IAuxiliaryManagerService {

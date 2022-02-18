@@ -17,14 +17,22 @@
 package com.android.auxiliary.service;
 
 import android.app.Service;
+import android.auxiliary.aidl.IAuxiliaryManagerService;
 import android.content.Intent;
 import android.os.IBinder;
 
 /** Implementation of Auxiliary Service */
 public class AuxiliaryManagerServiceImpl extends Service {
+    private IAuxiliaryManagerService.Stub mBinder;
+
+    @Override
+    public void onCreate() {
+        mBinder = new AuxiliaryManagerServiceDelegate();
+    }
+
     @Override
     public IBinder onBind(Intent intent) {
-        return null;
+        return mBinder;
     }
 
     String getVersion() {
