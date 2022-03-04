@@ -27,34 +27,12 @@ android_app_certificate {
     certificate: "com.android.auxiliary",
 }
 
-// Encapsulate the contributions made by the com.android.sdkext to the bootclasspath.
-bootclasspath_fragment {
-    name: "com.android.auxiliary-bootclasspath-fragment",
-    contents: ["framework-auxiliary"],
-    apex_available: ["com.android.auxiliary"],
-
-    // The bootclasspath_fragments that provide APIs on which this depends.
-    fragments: [
-        {
-            apex: "com.android.art",
-            module: "art-bootclasspath-fragment",
-        },
-    ],
-
-    // Additional stubs libraries that this fragment's contents use which are
-    // not provided by another bootclasspath_fragment.
-    additional_stubs: [
-        "android-non-updatable",
-    ],
-}
-
 apex {
     name: "com.android.auxiliary",
     manifest: "manifest.json",
     apps: ["Auxiliary"],
     file_contexts: ":com.android.auxiliary-file_contexts",
     key: "com.android.auxiliary.key",
-    bootclasspath_fragments: ["com.android.auxiliary-bootclasspath-fragment"],
     min_sdk_version: "Tiramisu",
     updatable: true,
 }
