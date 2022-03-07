@@ -30,7 +30,6 @@ android_app_certificate {
 apex {
     name: "com.android.auxiliary",
     manifest: "manifest.json",
-    apps: ["Auxiliary"],
     key: "com.android.auxiliary.key",
     min_sdk_version: "Tiramisu",
     updatable: true,
