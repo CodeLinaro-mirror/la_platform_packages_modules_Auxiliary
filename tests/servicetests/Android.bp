@@ -20,7 +20,7 @@ android_test {
     name: "AuxiliaryManagerServicesTests",
     srcs: [
         "src/**/*.java",
-        ":auxiliary-aidl",
+        ":framework-auxiliary-aidl",
         ":auxiliary-sources",
     ],
     libs: [
