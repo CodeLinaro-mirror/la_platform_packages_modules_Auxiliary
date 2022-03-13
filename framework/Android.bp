@@ -17,10 +17,21 @@ package {
 }
 
 filegroup {
+    name: "framework-auxiliary-aidl",
+    srcs: [
+        "java/**/*.aidl",
+    ],
+    visibility: [
+        "//frameworks/base",
+        "//packages/modules/Auxiliary:__subpackages__"
+    ],
+    path: "java",
+}
+
+filegroup {
     name: "framework-auxiliary-sources",
     srcs: [
         "java/**/*.java",
-        "java/**/*.aidl",
     ],
     visibility: [
         "//frameworks/base",
@@ -31,7 +42,10 @@ filegroup {
 
 java_sdk_library {
     name: "framework-auxiliary",
-    srcs: [":framework-auxiliary-sources"],
+    srcs: [
+        ":framework-auxiliary-sources",
+        ":framework-auxiliary-aidl",
+    ],
     sdk_version: "module_current",
     defaults: [
         "auxiliary-java-defaults",

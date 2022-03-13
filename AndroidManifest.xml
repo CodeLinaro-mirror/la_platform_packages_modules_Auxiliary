@@ -21,9 +21,12 @@
     package="com.android.auxiliary.service"
     android:versionCode="1"
     android:versionName="T-initial">
+    <uses-permission android:name="android.permission.START_ACTIVITIES_FROM_BACKGROUND"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
 
-    <application>
-        <service android:name=".AuxiliaryServiceImpl" android:exported="true" >
+    <application android:forceQueryable="true">
+        <service android:name=".AuxiliaryManagerServiceImpl" android:exported="true" >
             <intent-filter>
                 <action android:name="com.android.auxiliary.service.AuxiliaryService" />
             </intent-filter>
